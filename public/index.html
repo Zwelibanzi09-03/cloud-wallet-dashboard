@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cloud Wallet Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Cloud Wallet Dashboard</h1>
+      <p>My EC2 + MySQL Full Stack App</p>
+    </header>
+
+    <section class="card profile-card">
+      <h2>User Profile</h2>
+      <div id="user-info">Loading user...</div>
+    </section>
+
+    <section class="stats">
+      <div class="card stat-card">
+        <h3>Total Transactions</h3>
+        <p id="total-transactions">0</p>
+      </div>
+
+      <div class="card stat-card">
+        <h3>Total Amount</h3>
+        <p id="total-amount">R0.00</p>
+      </div>
+    </section>
+
+      <section class="card">
+  <h2>Add Transaction</h2>
+  <form id="transaction-form" class="transaction-form">
+    <input type="number" id="amount" placeholder="Enter amount" required />
+    <button type="submit">Add Transaction</button>
+  </form>
+</section>
+
+<section class="card">
+  <h2>Transaction Chart</h2>
+  <canvas id="transactionChart"></canvas>
+</section>
+
+    <section class="card">
+      <h2>Transactions</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>User ID</th>
+            <th>Amount</th>
+            <th>Created At</th>
+          </tr>
+        </thead>
+        <tbody id="transactions-body">
+          <tr>
+            <td colspan="4">Loading transactions...</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>
